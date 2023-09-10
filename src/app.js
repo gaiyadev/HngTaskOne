@@ -13,7 +13,14 @@ app.get("/api", (req, res) => {
   });
 
   // Format UTC time as specified
-  const utcTime = currentDate.toISOString().replace(/\.\d{3}Z$/, "Z");
+  const year = currentDate.getUTCFullYear();
+  const month = String(currentDate.getUTCMonth() + 1).padStart(2, "0");
+  const day = String(currentDate.getUTCDate()).padStart(2, "0");
+  const hours = String(currentDate.getUTCHours()).padStart(2, "0");
+  const minutes = String(currentDate.getUTCMinutes()).padStart(2, "0");
+  const seconds = String(currentDate.getUTCSeconds()).padStart(2, "0");
+
+  const utcTime = `${year}-${month}-${day}T${hours}:${minutes}:${seconds}Z`;
 
   // Replace these with your GitHub URLs
   const githubFileUrl =
