@@ -11,7 +11,9 @@ app.get("/api", (req, res) => {
   const currentDay = currentDate.toLocaleDateString("en-US", {
     weekday: "long",
   });
-  const utcTime = currentDate.toISOString();
+
+  // Format UTC time as specified
+  const utcTime = currentDate.toISOString().replace(/\.\d{3}Z$/, "Z");
 
   // Replace these with your GitHub URLs
   const githubFileUrl =
