@@ -15,8 +15,8 @@ app.get("/api", (req, res) => {
 
   // Replace these with your GitHub URLs
   const githubFileUrl =
-    "https://github.com/username/repo/blob/main/file_name.ext";
-  const githubRepoUrl = "https://github.com/username/repo";
+    "https://github.com/gaiyadev/HngTaskOne/blob/main/src/app.js";
+  const githubRepoUrl = "https://github.com/gaiyadev/HngTaskOne";
 
   const responseJson = {
     slack_name: slackName,
