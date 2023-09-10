@@ -1,0 +1,8 @@
+{
+  "functions": {
+    "api/index.js": {
+      "handler": "src/app.handler",
+      "runtime": "nodejs16"
+    }
+  }
+}
